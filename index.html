@@ -3,12 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Renderer</title>
+    <title>Patient selection for drug testing</title>
     <script defer src="script.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://th.bing.com/th/id/R.07127aa55fadcd82bd0eda0e3059061c?rik=Y2BSB4FngRU0Fw&riu=http%3a%2f%2fstatic1.squarespace.com%2fstatic%2f573365789f726693272dc91a%2f573394b801dbaec3a397e259%2f5744c3d14c2f853d76e4124b%2f1559054854020%2fdrug-testing.jpg%3fformat%3d1500w&ehk=j6FOeU7KOfw43P%2fZ7b0pfPU5Qzt3LhQL5vFADAFn6FM%3d&risl=&pid=ImgRaw&r=0') center/cover no-repeat; /* Replace 'your-background-image.jpg' with the actual image file path */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Text color on top of the background image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px; /* Add padding for better visibility on the background image */
+            max-width: 400px; /* Set a maximum width for the content */
+            width: 100%;
+        }
+
+        .content h1 {
+            color: #fff; /* Heading color */
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff; /* Label color */
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: #333; /* Input background color */
+            border: 1px solid #555; /* Input border color */
+            color: #fff; /* Input text color */
+            font-size: 14px; /* Adjust the font size */
+        }
+
+        .form-group select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group select::placeholder {
+            color: #aaa; /* Placeholder text color */
+        }
+
+        button {
+            background-color: #4CAF50; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Button background color on hover */
+        }
+    </style>
 </head>
 <body>
-    <label for="inputNumber">Enter a number:</label>
-    <input type="number" id="inputNumber" min="1" step="1">
-    <p id="output"></p>
+    <div class="content">
+        <h1>Drug Testing - Patient Selection</h1>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" placeholder="Enter Age">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="race">Race:</label>
+                    <input type="text" id="race" name="race" placeholder="Enter Race">
+                </div>
+                <div class="form-group">
+                    <label for="time_in_hospital">Time in Hospital:</label>
+                    <input type="text" id="time_in_hospital" name="time_in_hospital" placeholder="Enter Time in Hospital">
+                </div>
+                <div class="form-group">
+                    <label for="glucose-levels">Glucose_levels</label>
+                    <input type="text" id="Glucose_levels" name="Glucose_levels" placeholder="Glucose_levels">
+                </div>
+
+                <div class="form-group">
+                    <label for="patient_nbr">Patient Number:</label>
+                    <input type="text" id="patient_nbr" name="patient_nbr" placeholder="Enter Patient Number">
+                </div>
+                <!-- Add more input fields as needed -->
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
+
