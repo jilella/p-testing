@@ -6,6 +6,9 @@
             var time_in_hospital = document.getElementById('time_in_hospital').value;
             var glucose_levels = document.getElementById('glucose_levels').value;
             var patient_nbr = document.getElementById('patient_nbr').value;
+                var result = time_in_hospital > 5 ? 1 : 0;
+
+            console.log("Result: " + result);
 
             // Do something with the collected values, e.g., send to a server
             console.log("Age: " + age);
