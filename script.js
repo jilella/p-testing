@@ -4,7 +4,7 @@
             var timeInHospital = document.getElementById("time_in_hospital").value;
 
             // Convert the value to a number and check if it's less than 5
-            var result = parseInt(timeInHospital) < 5 ? 1 : 0;
+            var result = parseInt(timeInHospital) < 5 ? 0:1
 
             // Display the result (you can modify this part based on your requirements)
             alert("Result: " + result);
